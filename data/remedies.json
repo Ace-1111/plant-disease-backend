@@ -1,0 +1,192 @@
+{
+  "Apple___Apple_scab": {
+    "organic": "Apply sulfur or liquid copper sprays early in the season. Rake and destroy fallen leaves to reduce overwintering fungal spores.",
+    "chemical": "Spray fungicides containing Captan, Mancozeb, or Myclobutanil at regular intervals starting from bud break.",
+    "prevention": "Prune trees to improve air circulation and sunlight penetration. Plant scab-resistant apple cultivars."
+  },
+  "Apple___Black_rot": {
+    "organic": "Prune out dead wood, mummified fruits, and cankers. Apply copper-based organic fungicides during the dormant period.",
+    "chemical": "Use fungicides with active ingredients like Captan, Thiophanate-methyl, or Mancozeb.",
+    "prevention": "Sanitize pruning tools between cuts. Keep orchard floors clean and destroy infected plant debris."
+  },
+  "Apple___Cedar_apple_rust": {
+    "organic": "Remove nearby cedar/juniper galls within a 1-mile radius if possible. Apply sulfur or neem oil sprays at pink bud stage.",
+    "chemical": "Apply Myclobutanil, Mancozeb, or Propiconazole fungicides starting at early bloom.",
+    "prevention": "Avoid planting susceptible apple trees near eastern red cedar trees. Select rust-resistant cultivars."
+  },
+  "Apple___healthy": {
+    "organic": "Plant is vigorous and disease-free. Maintain regular compost and balanced organic mulching.",
+    "chemical": "No chemical treatment needed.",
+    "prevention": "Continue regular monitoring, deep root watering, and annual winter pruning."
+  },
+  "Blueberry___healthy": {
+    "organic": "Plant is healthy. Keep soil acidic (pH 4.5–5.5) using pine bark mulch and elemental sulfur.",
+    "chemical": "No chemical treatment needed.",
+    "prevention": "Ensure good drainage and maintain consistent drip irrigation."
+  },
+  "Cherry_(including_sour)___Powdery_mildew": {
+    "organic": "Spray potassium bicarbonate, diluted neem oil, or horticultural oils during the morning hours.",
+    "chemical": "Apply fungicides containing Myclobutanil, Triflumizole, or sulfur-based formulations.",
+    "prevention": "Prune canopies to increase airflow and avoid high-nitrogen fertilizers that cause dense, susceptible shoots."
+  },
+  "Cherry_(including_sour)___healthy": {
+    "organic": "Foliage is completely healthy. Provide organic mulch and maintain proper soil moisture.",
+    "chemical": "No chemical treatment needed.",
+    "prevention": "Inspect leaves regularly and practice sanitary dormant-season pruning."
+  },
+  "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": {
+    "organic": "Apply biological control agents like Bacillus subtilis and practice deep residue tillage.",
+    "chemical": "Apply strobilurin or triazole fungicides (e.g., Azoxystrobin, Pyraclostrobin, Propiconazole).",
+    "prevention": "Rotate crops with non-grass crops (such as soybeans) and plant resistant hybrids."
+  },
+  "Corn_(maize)___Common_rust_": {
+    "organic": "Encourage natural predatory insects and spray copper hydroxide formulations if pressure is mild.",
+    "chemical": "Use foliar fungicides containing Azoxystrobin, Propiconazole, or Pyraclostrobin.",
+    "prevention": "Plant rust-resistant corn varieties and ensure early planting to avoid peak spore dispersal."
+  },
+  "Corn_(maize)___Northern_Leaf_Blight": {
+    "organic": "Incorporate crop residue into the soil after harvest and apply copper fungicides if detected early.",
+    "chemical": "Apply systemic fungicides like Pyraclostrobin, Mancozeb, or Difenoconazole.",
+    "prevention": "Utilize 1-2 year crop rotation and select corn hybrids possessing the Ht-resistance gene."
+  },
+  "Corn_(maize)___healthy": {
+    "organic": "Crops are thriving. Maintain balanced N-P-K fertilization and adequate irrigation.",
+    "chemical": "No chemical treatment needed.",
+    "prevention": "Perform regular field scouting and weed control."
+  },
+  "Grape___Black_rot": {
+    "organic": "Remove and bury infected mummified berries. Spray copper-soap fungicides from bud break through veraison.",
+    "chemical": "Apply fungicides such as Mancozeb, Myclobutanil, or Captan starting at early shoot growth.",
+    "prevention": "Train vines on trellises to maximize canopy aeration and sunlight exposure."
+  },
+  "Grape___Esca_(Black_Measles)": {
+    "organic": "Prune infected cordons during dry weather and seal pruning wounds with organic wound sealant paste.",
+    "chemical": "Apply systemic fungicides like Fosetyl-Aluminium or paint wound surfaces with Thiophanate-methyl.",
+    "prevention": "Avoid heavy pruning during wet seasons and sanitize cutting shears with alcohol."
+  },
+  "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": {
+    "organic": "Spray Bordeaux mixture or copper sulfate solution in early spring.",
+    "chemical": "Use broad-spectrum protective fungicides such as Mancozeb, Chlorothalonil, or Carbendazim.",
+    "prevention": "Collect and burn fallen leaves to prevent the pathogen from overwintering."
+  },
+  "Grape___healthy": {
+    "organic": "Vines are strong and clean. Apply organic compost to the root zone.",
+    "chemical": "No chemical treatment needed.",
+    "prevention": "Continue canopy management and avoid overhead sprinkler watering."
+  },
+  "Orange___Haunglongbing_(Citrus_greening)": {
+    "organic": "Release parasitic wasps (Tamarixia radiata) to suppress Asian citrus psyllid populations. Apply foliar micronutrient sprays.",
+    "chemical": "Control psyllid vectors using systemic insecticides like Imidacloprid, Thiamethoxam, or Chlorpyrifos.",
+    "prevention": "Plant only certified disease-free nursery stock and eradicate infected trees promptly to prevent field spread."
+  },
+  "Peach___Bacterial_spot": {
+    "organic": "Apply preventive fixed copper sprays during late dormancy before bud swell.",
+    "chemical": "Spray low rates of copper mixed with oxytetracycline antibiotic during the growing season.",
+    "prevention": "Plant resistant cultivars, avoid excessive nitrogen applications, and establish windbreaks."
+  },
+  "Peach___healthy": {
+    "organic": "Tree is healthy. Maintain tree mulch and adequate seasonal watering.",
+    "chemical": "No chemical treatment needed.",
+    "prevention": "Perform dormant sprays to prevent peach leaf curl and monitor foliage weekly."
+  },
+  "Pepper,_bell___Bacterial_spot": {
+    "organic": "Spray copper-based bactericides combined with Bacillus amyloliquefaciens.",
+    "chemical": "Apply copper sulfate tank-mixed with Mancozeb to enhance bacterial suppression.",
+    "prevention": "Use certified pathogen-free seeds, practice drip irrigation, and avoid handling plants when foliage is wet."
+  },
+  "Pepper,_bell___healthy": {
+    "organic": "Foliage is clear and green. Support plants with stakes and organic liquid seaweed fertilizer.",
+    "chemical": "No chemical treatment needed.",
+    "prevention": "Maintain soil moisture balance and inspect the underside of leaves for early pest activity."
+  },
+  "Potato___Early_blight": {
+    "organic": "Apply copper octanoate or biofungicides containing Bacillus subtilis. Prune lower affected leaves.",
+    "chemical": "Spray fungicides containing Chlorothalonil, Mancozeb, Azoxystrobin, or Difenoconazole.",
+    "prevention": "Practice a 3-year crop rotation with non-solanaceous crops and avoid overhead irrigation."
+  },
+  "Potato___Late_blight": {
+    "organic": "Destroy infected tubers immediately. Apply preventive copper hydroxide sprays before humid weather.",
+    "chemical": "Use targeted systemic fungicides such as Metalaxyl, Dimethomorph, Cymoxanil, or Fluopicolide.",
+    "prevention": "Hill up soil around plants to protect developing tubers from washing spores."
+  },
+  "Potato___healthy": {
+    "organic": "Tuber canopy is in optimal condition. Maintain soil moisture and light mulching.",
+    "chemical": "No chemical treatment needed.",
+    "prevention": "Ensure good soil drainage and continue scout checks for Colorado potato beetles and aphids."
+  },
+  "Raspberry___healthy": {
+    "organic": "Canes are healthy. Mulch with wood chips and feed with well-rotted manure.",
+    "chemical": "No chemical treatment needed.",
+    "prevention": "Prune out spent floricanes after fruiting to promote sunlight and air movement."
+  },
+  "Soybean___healthy": {
+    "organic": "Crop shows vigorous vegetative growth. Ensure good nodulation with Rhizobium bacteria.",
+    "chemical": "No chemical treatment needed.",
+    "prevention": "Maintain integrated weed management and scout for soybean aphids."
+  },
+  "Squash___Powdery_mildew": {
+    "organic": "Spray solutions of potassium bicarbonate, sulfur, or milk-water mixture (1:9 ratio) under sunlight.",
+    "chemical": "Apply systemic fungicides containing Myclobutanil, Boscalid, or Quinoxyfen.",
+    "prevention": "Select mildew-resistant varieties and maintain wide plant spacing for airflow."
+  },
+  "Strawberry___Leaf_scorch": {
+    "organic": "Remove and discard diseased leaves after harvest. Spray copper soap fungicides before bloom.",
+    "chemical": "Apply fungicides such as Captan, Dodine, or Pyraclostrobin.",
+    "prevention": "Renovate strawberry beds after harvest, remove old runner leaves, and avoid overhead sprinkler systems."
+  },
+  "Strawberry___healthy": {
+    "organic": "Plants are robust and productive. Provide pine needle mulch to keep berries off damp soil.",
+    "chemical": "No chemical treatment needed.",
+    "prevention": "Water at the crown base using drip lines and thin overcrowded runners."
+  },
+  "Tomato___Bacterial_spot": {
+    "organic": "Apply copper-based organic formulations mixed with microbial sprays (Bacillus subtilis).",
+    "chemical": "Spray copper hydroxide tank-mixed with Mancozeb for improved bacterial control.",
+    "prevention": "Disinfect garden stakes and cages. Never work among plants when foliage is wet from rain or dew."
+  },
+  "Tomato___Early_blight": {
+    "organic": "Strip lower leaves touching soil. Apply organic copper fungicide or neem-based antifungal solutions.",
+    "chemical": "Apply fungicides containing Chlorothalonil, Mancozeb, Azoxystrobin, or Difenoconazole.",
+    "prevention": "Mulch the soil surface beneath plants to stop soil-borne fungal spores from splashing onto leaves."
+  },
+  "Tomato___Late_blight": {
+    "organic": "Remove and seal heavily infected plants in bags. Apply preventive copper spray during cool, damp weather.",
+    "chemical": "Apply targeted oomycete fungicides such as Metalaxyl-M, Dimethomorph, Cyazofamid, or Mancozeb.",
+    "prevention": "Ensure maximum spacing between plants and eliminate volunteer tomato and potato plants."
+  },
+  "Tomato___Leaf_Mold": {
+    "organic": "Apply sulfur or copper fungicides. Ensure strong greenhouse ventilation and lower indoor humidity below 80%.",
+    "chemical": "Use protective fungicides such as Chlorothalonil, Thiophanate-methyl, or Mancozeb.",
+    "prevention": "Prune excess suckers to facilitate air flow and avoid overhead spraying inside tunnels/greenhouses."
+  },
+  "Tomato___Septoria_leaf_spot": {
+    "organic": "Prune out spotted bottom leaves immediately. Spray biofungicides or copper sulfate compounds.",
+    "chemical": "Spray preventative fungicides like Chlorothalonil, Mancozeb, or Quadris (Azoxystrobin).",
+    "prevention": "Rotate tomato beds every 2 to 3 years and use ground cloth/mulch to block soil splash."
+  },
+  "Tomato___Spider_mites Two-spotted_spider_mite": {
+    "organic": "Spray insecticidal soap, rosemary oil extract, or neem oil directly under the leaves. Introduce predatory mites (Phytoseiulus persimilis).",
+    "chemical": "Apply targeted miticides/acaricides such as Abamectin, Bifenazate, or Spiromesifen.",
+    "prevention": "Keep plants well-watered to prevent heat/drought stress and hose down dust around garden perimeters."
+  },
+  "Tomato___Target_Spot": {
+    "organic": "Apply copper-based fungicides and prune crowded inner branches to allow light penetration.",
+    "chemical": "Spray fungicides formulated with Chlorothalonil, Azoxystrobin, or Famoxadone.",
+    "prevention": "Keep plants staked upright and ensure leaves dry quickly following rainfall."
+  },
+  "Tomato___Tomato_Yellow_Leaf_Curl_Virus": {
+    "organic": "Control silverleaf whitefly vectors using yellow sticky cards, insecticidal soaps, or reflective silver mulch.",
+    "chemical": "Apply systemic insecticides like Imidacloprid, Acetamiprid, or Dinotefuran to control whiteflies.",
+    "prevention": "Install fine mesh netting in greenhouses and plant TYLCV-resistant hybrid tomato seed varieties."
+  },
+  "Tomato___Tomato_mosaic_virus": {
+    "organic": "There is no cure once infected; carefully dig up and destroy diseased plants to protect healthy ones.",
+    "chemical": "Chemical fungicides and virucides are ineffective against plant viruses.",
+    "prevention": "Wash hands with milk or soap before touching plants (especially after tobacco use). Disinfect tools with a 10% bleach solution."
+  },
+  "Tomato___healthy": {
+    "organic": "Plant is thriving. Support vigorous vine growth with compost tea and organic calcium supplements.",
+    "chemical": "No chemical treatment needed.",
+    "prevention": "Maintain regular watering to prevent blossom end rot and prune suckers for optimal fruiting."
+  }
+}
