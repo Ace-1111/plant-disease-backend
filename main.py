@@ -1,4 +1,5 @@
 import io
+import gc
 import json
 from pathlib import Path
 from PIL import Image
@@ -8,6 +9,9 @@ import torch.nn as nn
 from torchvision import models, transforms
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+
+# Single thread force karein taaki PyTorch CPU par multiple threads se RAM spike na kare
+torch.set_num_threads(1)
 
 app = FastAPI(title="Plant Disease Detection API", version="1.0.1")
 
@@ -63,22 +67,28 @@ def get_model():
     net.load_state_dict(state_dict)
     net.to(DEVICE)
     net.eval()
+    
+    # Unused weights aur memory release
+    del state_dict
+    gc.collect()
     return net
 
 model = get_model()
 
-# Utility to check if enough natural shades exist (Protects completely non-plant OOD)
+# RAM-friendly Nature Shade Filter (Thumbnail sample to save ~120MB RAM)
 def inspect_nature_shades(image: Image.Image) -> bool:
-    # Converting to HSV to count natural color ranges (green, brown, yellow)
-    hsv_image = image.convert("HSV")
-    h_data = list(hsv_image.getdata(0)) # Hue channel
+    # 64x64 thumbnail par check karo, poori full-res image ko memory me list banane ki zaroorat nahi
+    small_img = image.copy()
+    small_img.thumbnail((64, 64))
+    hsv_image = small_img.convert("HSV")
+    h_channel = hsv_image.split()[0]
     
-    # Range for green/brown/yellow
+    h_data = h_channel.getdata()
     matching_pixels = sum(1 for h in h_data if (30 <= h <= 85) or (10 <= h < 30) or (85 < h <= 110))
-    ratio = matching_pixels / len(h_data)
+    total_pixels = len(h_data)
     
-    # 8% natural shade standard is highly permissive for leaves but filters objects
-    return ratio > 0.08
+    del small_img, hsv_image, h_channel
+    return (matching_pixels / total_pixels) > 0.08
 
 # ----------------- Endpoints -----------------
 @app.get("/")
@@ -91,7 +101,6 @@ def home():
 
 @app.post("/predict")
 async def predict_leaf(file: UploadFile = File(...)):
-    # Extension aur Content-Type dono ko consider karo
     filename = file.filename.lower() if file.filename else ""
     valid_extensions = (".jpg", ".jpeg", ".png")
     valid_content_types = ["image/jpeg", "image/png", "image/jpg", "application/octet-stream"]
@@ -102,12 +111,15 @@ async def predict_leaf(file: UploadFile = File(...)):
             detail="Sirf JPEG ya PNG image upload karein."
         )
 
+    image = None
+    tensor = None
     try:
         # Read and convert image
         image_bytes = await file.read()
         image = Image.open(io.BytesIO(image_bytes)).convert("RGB")
+        del image_bytes
         
-        # OOD Natural Filter to protect model mismatch
+        # OOD Natural Filter
         if not inspect_nature_shades(image):
             return {
                 "success": False,
@@ -129,7 +141,6 @@ async def predict_leaf(file: UploadFile = File(...)):
 
         # 1. Soft Out-of-Distribution Rejection Handling
         if predicted_class == "Background_Without_Leaves":
-            # Natural image matching checks:
             if confidence_score > 60.0:
                 return {
                     "success": False,
@@ -137,9 +148,8 @@ async def predict_leaf(file: UploadFile = File(...)):
                     "message": "Koi plant leaf detect nahi hui. Kripya kisi paudhe ke patte ki saaf photo upload karein.",
                     "confidence": confidence_score
                 }
-            # Else falls back to predictive match in class space if threshold goes below 60% with validation
 
-        # 2. Field threshold lowered from 60.0% to 42.0% (Essential for wet/noisy farm shots)
+        # 2. Field threshold lowered from 60.0% to 42.0%
         if confidence_score < 42.0:
             return {
                 "success": False,
@@ -153,7 +163,6 @@ async def predict_leaf(file: UploadFile = File(...)):
         crop_name = parts[0].replace("_", " ")
         disease_name = parts[1].replace("_", " ") if len(parts) > 1 else "Healthy"
         
-        # If Background filter overlapped, bypass properly
         if crop_name.lower() == "background without leaves":
             return {
                 "success": False,
@@ -183,6 +192,11 @@ async def predict_leaf(file: UploadFile = File(...)):
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Inference error: {str(e)}")
+
+    finally:
+        # Har request ke baad memory purge karo
+        del image, tensor
+        gc.collect()
 
 if __name__ == "__main__":
     import uvicorn
